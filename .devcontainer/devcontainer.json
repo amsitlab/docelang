@@ -1,0 +1,16 @@
+
+{
+  "name": "Zig Dev",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "containerEnv": {
+    "TCP_PORT": "9000"
+  },
+  "postStartCommand": "nohup socat TCP-LISTEN:${TCP_PORT},reuseaddr,fork EXEC:'zls' > /var/log/zls.log 2>&1 &",
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {
+        "version": "latest"
+    }
+  }
+}
