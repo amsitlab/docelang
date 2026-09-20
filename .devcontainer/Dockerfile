@@ -7,7 +7,8 @@ RUN apt-get update 2>&1 | tee -a $LOGFILE; \
     apt-get install -y  \
     curl git build-essential pkg-config cmake \
     python3 python3-pip xz-utils ca-certificates \
-    libxcb1-dev libx11-dev socat supervisor 2>&1 | tee -a $LOGFILE; \
+    libxcb1-dev libx11-dev socat supervisor \
+	neovim tmux 2>&1 | tee -a $LOGFILE; \
     apt-get clean 2>&1 | tee -a $LOGFILE; \
 	rm -rf /var/lib/apt/lists/* 2>&1 | tee -a $LOGFILE
 
