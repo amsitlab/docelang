@@ -12,7 +12,7 @@ RUN apt-get update 2>&1 | tee -a $LOGFILE; \
     apt-get clean 2>&1 | tee -a $LOGFILE; \
 	rm -rf /var/lib/apt/lists/* 2>&1 | tee -a $LOGFILE
 
-RUN curl -LO https://ziglang.org/download/${ZIG_VERSION}/zig-linux-x86_64-${ZIG_VERSION}.tar.xz 2>&1 | tee -a $LOGFILE; \
+RUN curl -LO "https://ziglang.org/download/${ZIG_VERSION}/zig-x86_64-linux-${ZIG_VERSION}.tar.xz" 2>&1 | tee -a $LOGFILE; \
     tar -xf zig-linux-x86_64-${ZIG_VERSION}.tar.xz 2>&1 | tee -a $LOGFILE; \
     mv zig-linux-x86_64-${ZIG_VERSION} /opt/zig 2>&1 | tee -a $LOGFILE; \
     ln -s /opt/zig/zig /usr/local/bin/zig 2>&1 | tee -a $LOGFILE; \
