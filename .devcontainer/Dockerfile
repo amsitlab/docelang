@@ -2,7 +2,7 @@ FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 ARG LOGFILE=/container.log
-ARG ZIG_VERSION=0.14.0
+ARG ZIG_VERSION=0.16.0
 RUN apt-get update 2>&1 | tee -a $LOGFILE; \
     apt-get install -y  \
     curl git build-essential pkg-config cmake \
