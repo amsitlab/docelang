@@ -24,7 +24,7 @@ RUN curl -LO https://ziglang.org/download/${ZIG_VERSION}/zig-linux-x86_64-${ZIG_
 #    ln -s /opt/zls/zig-out/bin/zls /usr/local/bin/zls
 
 RUN TMP_DIR=$(mktemp -d) && \
-    curl -L "https://github.com/zigtools/zls/releases/download/0.14.0/zls-x86_64-linux.tar.xz" | \
+    curl -L "https://github.com/zigtools/zls/releases/download/${ZIG_VERSION}/zls-x86_64-linux.tar.xz" | \
 	tar -xJ -C $TMP_DIR 2>&1 | tee -a $LOGFILE; \
 	mv $TMP_DIR/zls /usr/local/bin/zls | tee -a $LOGFILE
 
