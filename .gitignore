@@ -1,0 +1,4 @@
+scripts/*
+trash/*
+.tmux.conf
+.scripts/*
